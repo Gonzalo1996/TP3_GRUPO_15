@@ -40,7 +40,7 @@ public class daoMysql {
 	    public String username = "root";
 
 	    // Clave de usuario
-	    public String password = "juan";
+	    public String password = "root";
 
 	    
 	    
@@ -60,6 +60,7 @@ public class daoMysql {
 
 	        return conn;
 	    }
+	    
 	    
 	    
 	    

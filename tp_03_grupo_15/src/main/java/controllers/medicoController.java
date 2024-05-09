@@ -9,7 +9,6 @@ import package01.medico;
 
 public class medicoController {
 	
-	
 	public String crearMedico(int legajo, String nombre, String apellido, String genero, String nac)
 	{
 		
@@ -20,6 +19,7 @@ public class medicoController {
 		
 		try
 		{
+			
 			
 			
 			medico m01 = new medico(legajo, nombre, apellido, genero, nac);
@@ -40,6 +40,23 @@ public class medicoController {
 		
 		
 		return "error con la carga del medico";
+	}
+	
+	public String delete(medico usuario) {
+		
+		SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(medico.class).buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		
+		
+		session.beginTransaction();
+		session.delete(usuario);
+		session.getTransaction().commit();
+		session.close();
+		
+		sessionFactory.close();
+		
+		return "Registro eliminado";
+		
 	}
 	
 	

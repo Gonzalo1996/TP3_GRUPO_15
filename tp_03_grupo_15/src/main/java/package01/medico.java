@@ -74,6 +74,7 @@ public class medico {
 		this.nac = nac;
 	}
 	
+	
 	public medico() {
 		
 	}

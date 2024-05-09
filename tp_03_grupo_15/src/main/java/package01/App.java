@@ -20,7 +20,7 @@ public class App
     	
     	daoMysql objetoMysql = new daoMysql();    	
     	ArrayList<String> listado = new ArrayList<String>();    	
-    	listado = objetoMysql.RetornarRegistros();
+    	//listado = objetoMysql.RetornarRegistros();
     			
     	/*
     	for(String cadena : listado){
@@ -49,7 +49,7 @@ public class App
     	{
     	case 1:
     		
-    		
+    		/*
     		System.out.println( "Ingresar Nombre" );
     		
     		String nombre = sc.nextLine();
@@ -65,13 +65,13 @@ public class App
     		System.out.println( "Ingresar Fecha nac" );
         	
     		String nac = sc.nextLine(); 	
-        	
+        	*/
         	/*
         	daoMysql claseMysql = new daoMysql();        	
         	claseMysql.AltaMedico(nombre, apellido, genero, nac);       	*/
     		
     		
-    		String medico01 = new medicoController().crearMedico(1001, "luis", "romero", "masculino", "01/01/1000");
+    		String medico01 = new medicoController().crearMedico(1002, "Gonzalo", "Alderete", "masculino", "01/01/1000");
         	
     		System.out.println( "Resultado de la operacion de carga : " +  medico01);
     		break;
@@ -83,6 +83,10 @@ public class App
     		
     		
     	case 3:
+    		
+    		medico usuario = new medico(1002, "Gonzalo", "Alderete", "masculino", "01/01/1000");
+    		String registro = new medicoController().delete(usuario);
+    		System.out.println(registro);
     		
     		break;
     		
