@@ -77,7 +77,10 @@ public class App
     		break;
     		
     	case 2:
+    		medico usuarioM = new medico(1002, "Pedro", "Perez", "masculino", "01/01/1900");
+    		String usuarioModificado = new medicoController().update(usuarioM);
     		
+    		System.out.println(usuarioModificado);
     		break;
     		
     		
@@ -93,6 +96,7 @@ public class App
     		
     		
     	case 4:
+    		
     		
     		break;
     		

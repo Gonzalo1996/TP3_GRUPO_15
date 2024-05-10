@@ -59,6 +59,20 @@ public class medicoController {
 		
 	}
 	
+	public String update(medico id) {
+		SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(medico.class).buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		
+		session.beginTransaction();
+        session.update(id);
+        session.getTransaction().commit();
+        
+        
+        session.close();
+        sessionFactory.close();
+        return "Registro actualizado correctamente";
+	}
+	
 	
 
 }
