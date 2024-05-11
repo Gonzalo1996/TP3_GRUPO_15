@@ -127,15 +127,16 @@ public class medico implements Serializable{
 	public medico() {
 		
 	}
-	
-	
-	
 	@Override
 	public String toString() {
-		String cadena = "Legajo Medico : " + this.getLegajo() + " - Nombre : " + this.getNombre() + " - Apellido : " +
-	this.getApellido() + " - Genero : " + this.getGenero() + " - Fecha Nacimiento : " + this.getNac() + ";";
-		return cadena;
+		return "Legajo: " + legajo + ", Nombre: " + nombre + ", Apellido: " + apellido + ", Género: " + genero
+				+ ", Nacimiento: " + nac + ", Correo: " + correo + ", Direccion: " + direccion + ", Localidad: " + localidad
+				+ ", Telefono: " + telefono;
 	}
+	
+	
+	
+	
 	
 	
 	

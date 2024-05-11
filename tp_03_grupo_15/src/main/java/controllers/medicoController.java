@@ -4,6 +4,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 import package01.medico;
+import java.util.List;
+
 
 
 public class medicoController {
@@ -83,7 +85,22 @@ public class medicoController {
 	    sessionFactory.close();
 	
 	}
+	
 */
+	
+	public List<medico> ReadAll() {
+	    SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(medico.class).buildSessionFactory();
+	    Session session = sessionFactory.openSession();
+
+	    session.beginTransaction();
+	    List<medico> medicos = session.createQuery("FROM medico").list();
+	    session.getTransaction().commit();
+
+	    session.close();
+	    sessionFactory.close();
+
+	    return medicos;
+	}
 	
 	
 }

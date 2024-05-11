@@ -2,6 +2,8 @@ package package01;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.List;
+
 
 import controllers.medicoController;
 
@@ -138,27 +140,26 @@ public class App
     		
     		
     	case 3:
+    		System.out.println( "Ingresar el legajo del médico a eliminar: " );
+       		
+    		String legajoEliminar = sc.nextLine();
     		
-    		//medico usuario = new medico(1002, "Gonzalo", "Alderete", "masculino", "01/01/1000");
-    		//String registro = new medicoController().delete(usuario);
-    		//System.out.println(registro);
+    		medico med = new medico();
+    		med.setLegajo(Integer.parseInt(legajoEliminar));
+    		String registro = new medicoController().delete(med);
+    		System.out.println(registro);
     		
     		break;
     		
     		
     		
     	case 4:
-    		/*
-    		System.out.println( "Ingresar Legajo:" );
-    		
-    		String leg = sc.nextLine();
-    		
-    		medico usuario1= new medico(1002, "Gonzalo", "Alderete", "masculino", "01/01/1000");
-    		usuario1= new medicoController().ReadOne(leg);
-    		System.out.println(usuario1.toString());
-    		break;
-    		
-        	*/
+    		System.out.println( "Listado de médicos: " );
+
+    		List<medico> medicos = new medicoController().ReadAll();
+    		for (medico medico : medicos) {
+    		    System.out.println(medico);
+    		}
         	
     	}
     		
