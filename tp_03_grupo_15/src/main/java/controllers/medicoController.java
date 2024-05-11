@@ -3,7 +3,6 @@ package controllers;
 import org.hibernate.SessionFactory;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
-
 import package01.medico;
 
 
@@ -72,7 +71,19 @@ public class medicoController {
         sessionFactory.close();
         return "Registro actualizado correctamente";
 	}
+	/*
+	public medico ReadOne(int leg) {
+		SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(medico.class).buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		
+		session.beginTransaction();
+		medico medico= (medico)session.get(medico.class, leg);
+		
+	    session.close();
+	    sessionFactory.close();
+	
+	}
+*/
 	
 	
-
 }

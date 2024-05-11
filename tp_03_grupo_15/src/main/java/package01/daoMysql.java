@@ -14,6 +14,8 @@ public class daoMysql {
 	
 	
 		
+		private static final String ConfigHibernate = null;
+
 		public String sql;
 	
 		public ArrayList<String> Lista = new ArrayList<String>();
@@ -110,7 +112,7 @@ public class daoMysql {
 	    	
 	    	this.addMEdico(medic01);
 	    }
-	    	
+	    	  
 	    	
 	    	public void addMEdico(medico m01) {
 	    		   try {

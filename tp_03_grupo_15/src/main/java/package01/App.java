@@ -96,11 +96,17 @@ public class App
     		
     		
     	case 4:
+    		/*
+    		System.out.println( "Ingresar Legajo:" );
     		
+    		String leg = sc.nextLine();
     		
+    		medico usuario1= new medico(1002, "Gonzalo", "Alderete", "masculino", "01/01/1000");
+    		usuario1= new medicoController().ReadOne(leg);
+    		System.out.println(usuario1.toString());
     		break;
     		
-        	
+        	*/
         	
     	}
     		
