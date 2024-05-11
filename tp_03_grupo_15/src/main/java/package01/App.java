@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import controllers.medicoController;
 
+
 /**
  * Hello world!
  *
@@ -44,40 +45,91 @@ public class App
     	
     	int opcion = sc.nextInt();
     	
+    	//Agregado para evitar saltar el nombre
+    	sc.nextLine();
+    	
     	System.out.println( "El dato ingresado es: " +  opcion);
     	switch(opcion)
     	{
     	case 1:
-    		
-    		/*
-    		System.out.println( "Ingresar Nombre" );
-    		
+    		System.out.println( "Ingresar nombre" );
+   		
     		String nombre = sc.nextLine();
-        	
-    		System.out.println( "Ingresar Apellido" );
-        	
+       	
+    		System.out.println( "Ingresar apellido" );
+       	
     		String apellido = sc.nextLine();
-        	
+       	
     		System.out.println( "Ingresar sexo" );
         	
     		String genero = sc.nextLine();
         	
-    		System.out.println( "Ingresar Fecha nac" );
+    		System.out.println( "Ingresar fecha nac" );
         	
-    		String nac = sc.nextLine(); 	
-        	*/
-        	/*
-        	daoMysql claseMysql = new daoMysql();        	
-        	claseMysql.AltaMedico(nombre, apellido, genero, nac);       	*/
+    		String nac = sc.nextLine();
     		
-    		
-    		String medico01 = new medicoController().crearMedico(1002, "Gonzalo", "Alderete", "masculino", "01/01/1000");
+    		System.out.println( "Ingresar correo" );
         	
+    		String correo = sc.nextLine();
+    		
+    		System.out.println( "Ingresar dirección");
+        	
+    		String direccion = sc.nextLine();
+    		
+    		System.out.println( "Ingresar localidad" );
+        	
+    		String localidad = sc.nextLine();
+    		
+    		System.out.println( "Ingresar télefono" );
+        	
+    		String telefono = sc.nextLine();
+        	
+//        	daoMysql claseMysql = new daoMysql();        	
+//        	claseMysql.AltaMedico(nombre, apellido, genero, nac);
+    		
+    		String medico01 = new medicoController().crearMedico(nombre, apellido, genero, nac, correo, direccion, localidad, telefono);
     		System.out.println( "Resultado de la operacion de carga : " +  medico01);
     		break;
     		
     	case 2:
-    		medico usuarioM = new medico(1002, "Pedro", "Perez", "masculino", "01/01/1900");
+    		System.out.println( "Ingresar el legajo del médico a modificar" );
+       		
+    		String legajoModificar = sc.nextLine();
+    		
+    		System.out.println( "Ingresar nombre" );
+       		
+    		String nombreModificar = sc.nextLine();
+       	
+    		System.out.println( "Ingresar apellido" );
+       	
+    		String apellidoModificar = sc.nextLine();
+       	
+    		System.out.println( "Ingresar sexo" );
+        	
+    		String generoModificar = sc.nextLine();
+        	
+    		System.out.println( "Ingresar fecha nac" );
+        	
+    		String nacModificar = sc.nextLine();
+    		
+    		System.out.println( "Ingresar correo" );
+        	
+    		String correoModificar = sc.nextLine();
+    		
+    		System.out.println( "Ingresar dirección");
+        	
+    		String direccionModificar = sc.nextLine();
+    		
+    		System.out.println( "Ingresar localidad" );
+        	
+    		String localidadModificar = sc.nextLine();
+    		
+    		System.out.println( "Ingresar télefono" );
+    		
+    		String telefonoModificar = sc.nextLine();
+    		
+    		medico usuarioM = new medico(nombreModificar, apellidoModificar, generoModificar, nacModificar, correoModificar, direccionModificar, localidadModificar, telefonoModificar);
+    		usuarioM.setLegajo(Integer.parseInt(legajoModificar));
     		String usuarioModificado = new medicoController().update(usuarioM);
     		
     		System.out.println(usuarioModificado);
@@ -87,9 +139,9 @@ public class App
     		
     	case 3:
     		
-    		medico usuario = new medico(1002, "Gonzalo", "Alderete", "masculino", "01/01/1000");
-    		String registro = new medicoController().delete(usuario);
-    		System.out.println(registro);
+    		//medico usuario = new medico(1002, "Gonzalo", "Alderete", "masculino", "01/01/1000");
+    		//String registro = new medicoController().delete(usuario);
+    		//System.out.println(registro);
     		
     		break;
     		

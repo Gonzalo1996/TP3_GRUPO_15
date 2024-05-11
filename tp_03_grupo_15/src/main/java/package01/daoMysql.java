@@ -135,7 +135,7 @@ public class daoMysql {
 	    		        preparedStmt.execute();
 	    		        
 	    		        conex.close();
-	    		        
+	    		        System.out.println( "Médico creado correctamente." );
 	    		        
 	    		       
 	    		    } catch (Exception e) 

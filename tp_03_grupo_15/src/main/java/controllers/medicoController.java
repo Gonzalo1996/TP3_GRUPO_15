@@ -8,7 +8,7 @@ import package01.medico;
 
 public class medicoController {
 	
-	public String crearMedico(int legajo, String nombre, String apellido, String genero, String nac)
+	public String crearMedico(String nombre, String apellido, String genero, String nac, String correo, String direccion, String localidad, String telefono)
 	{
 		
 		
@@ -21,7 +21,7 @@ public class medicoController {
 			
 			
 			
-			medico m01 = new medico(legajo, nombre, apellido, genero, nac);
+			medico m01 = new medico(nombre, apellido, genero, nac, correo, direccion, localidad, telefono);
 			
 			sesion.beginTransaction();
 			sesion.save(m01);
