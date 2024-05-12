@@ -54,6 +54,7 @@ public class App
     	switch(opcion)
     	{
     	case 1:
+    		/*
     		System.out.println( "Ingresar nombre" );
    		
     		String nombre = sc.nextLine();
@@ -85,12 +86,31 @@ public class App
     		System.out.println( "Ingresar télefono" );
         	
     		String telefono = sc.nextLine();
-        	
+        	*/
 //        	daoMysql claseMysql = new daoMysql();        	
 //        	claseMysql.AltaMedico(nombre, apellido, genero, nac);
     		
-    		String medico01 = new medicoController().crearMedico(nombre, apellido, genero, nac, correo, direccion, localidad, telefono);
+    		String medico01 = new medicoController().crearMedico("Gonzalo", "Alderete", "Masculino", "12/02/1996", "gonzalo@prueba.com", "falsa 111", "Pacheco", "11-12229");
+    		String medico02 = new medicoController().crearMedico("Gaston", "Argañaz", "Masculino", "01/06/1996", "gaston@prueba.com", "falsa 222", "Pacheco", "11-12229");
+    		String medico03 = new medicoController().crearMedico("Leonel", "Herrera", "Masculino", "30/12/2000", "leonel@prueba.com", "falsa 333", "Pacheco", "11-12229");
+    		String medico04 = new medicoController().crearMedico("Guido", "Romero", "Masculino", "11/02/2001", "guido@prueba.com", "falsa 444", "Pacheco", "11-12229");
+    		String medico05 = new medicoController().crearMedico("Walter", "Pizzo", "Masculino", "29/02/1998", "walter@prueba.com", "falsa 555", "Pacheco", "11-12229");
+    		String medico06 = new medicoController().crearMedico("Tamara", "Herrera", "Femenina", "14/05/2000", "tamara@prueba.com", "falsa 666", "Pacheco", "11-12229");
+    		String medico07 = new medicoController().crearMedico("Pepito", "Perez", "Masculino", "12/02/1996", "pepito@prueba.com", "falsa 777", "Pacheco", "11-12229");
+    		String medico08 = new medicoController().crearMedico("Pepita", "Perez", "Femenina", "04/04/1999", "pepita@prueba.com", "falsa 888", "Pacheco", "11-12229");
+    		String medico09 = new medicoController().crearMedico("Juan", "Diaz", "Masculino", "12/02/1996", "juan@prueba.com", "falsa 999", "Pacheco", "11-12229");
+    		String medico10 = new medicoController().crearMedico("Laura", "Morales", "Femenino", "02/12/2000", "laura@prueba.com", "falsa 321", "Pacheco", "11-12229");
+    		
     		System.out.println( "Resultado de la operacion de carga : " +  medico01);
+    		System.out.println( "Resultado de la operacion de carga : " +  medico02);
+    		System.out.println( "Resultado de la operacion de carga : " +  medico03);
+    		System.out.println( "Resultado de la operacion de carga : " +  medico04);
+    		System.out.println( "Resultado de la operacion de carga : " +  medico05);
+    		System.out.println( "Resultado de la operacion de carga : " +  medico06);
+    		System.out.println( "Resultado de la operacion de carga : " +  medico07);
+    		System.out.println( "Resultado de la operacion de carga : " +  medico08);
+    		System.out.println( "Resultado de la operacion de carga : " +  medico09);
+    		System.out.println( "Resultado de la operacion de carga : " +  medico10);
     		break;
     		
     	case 2:
